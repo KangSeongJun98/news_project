@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* zocial */
+[class*="entypo-"]:before {
+	font-family: 'entypo', sans-serif !important;
+}
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+
+h2 {
+	color: rgba(255, 255, 255, .8) !important;
+	margin-left: 12px !important;
+}
+
+body {
+	font-family: 'Roboto', sans-serif !important;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0; /* 푸터의 내부 여백 */
+	text-align: center; /* 푸터 내용 가운데 정렬 */
+}
+
+form {
+	position: relative !important;
+	margin: 50px auto !important;
+	width: 380px !important;
+	height: auto !important;
+}
+
+input {
+	padding: 16px !important;
+	border-radius: 7px !important;
+	border: 0px !important;
+	background: rgba(255, 255, 255, .2) !important;
+	display: block !important;
+	margin: 15px !important;
+	width: 300px !important;
+	color: white !important;
+	font-size: 18px !important;
+	height: 54px !important;
+}
+
+input:focus {
+	outline-color: rgba(0, 0, 0, 0) !important;
+	background: rgba(255, 255, 255, .95) !important;
+	color: #e74c3c !important;
+}
+
+.submit {
+	float: right;
+	height: 121px;
+	width: 50px;
+	border: 0px;
+	background: #e74c3c;
+	border-radius: 7px;
+	padding: 10px;
+	color: white;
+	font-size: 22px;
+}
+
+.inputUserIcon {
+	position: absolute !important;
+	top: 68px !important;
+	right: 80px !important;
+	color: white !important;
+}
+
+
+.inputPassIcon {
+	position: absolute !important;
+	top: 136px !important;
+	right: 80px !important;
+	color: white !important;
+}
+
+input::-webkit-input-placeholder {
+	color: white !important;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #e74c3c !important;
+}

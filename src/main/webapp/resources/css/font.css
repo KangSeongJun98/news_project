@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+th,caption{
+font-size: 30px !important;
+font-family: BMJUA !important;
+}
+td{
+font-family: Chosunilbo_myungjo;
+font-size: 20px !important;
+}

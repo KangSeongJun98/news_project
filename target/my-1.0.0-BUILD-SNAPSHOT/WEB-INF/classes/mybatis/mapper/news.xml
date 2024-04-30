@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.my.news.dao.INewsDAO">
+	
+	<select id="getRealTime" parameterType="RealTimeVO" resultType="RealTimeVO">
+		SELECT search_rank, search_content, reference_date
+		FROM(
+		    SELECT search_rank, 
+		           search_content , 
+		           To_CHAR(reference_date, 'YYYY/MM/DD HH24:MI:SS')as reference_date
+		    FROM real_time_search
+		    ORDER BY reference_date DESC, search_rank
+		    )
+		WHERE ROWNUM <![CDATA[<=]]> 10
+	</select>
+	
+</mapper>

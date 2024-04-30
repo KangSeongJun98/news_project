@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.my.member.dao.IMemberDAO">
+	
+	<insert id="registMember" parameterType="MemberVO">
+		INSERT INTO members(mem_id, mem_pw, mem_nm, mem_tel) 
+		VALUES( #{memId}, #{memPw}, #{memNm}, #{memTel}  )
+	</insert>
+	
+	<select id="loginMember" parameterType="MemberVO" resultType="MemberVO">
+		SELECT mem_id,
+	       mem_pw, 
+	       mem_nm, 
+	       TRIM(REGEXP_REPLACE(mem_tel,  '(.{3})(.+)(.{4})', '\1-\2-\3')) as mem_tel
+		FROM members
+		WHERE use_yn = 'Y'
+		AND mem_id = #{memId}
+	</select>
+	
+	<update id="updateMember" parameterType="MemberVO">
+		UPDATE members
+		SET mem_nm = #{memNm }, mem_tel=#{memTel}
+		where mem_id =#{memId}
+	</update>
+</mapper>
